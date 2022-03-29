@@ -14,7 +14,7 @@
 <style>
 .darwin-piodos{
     width:200px;
-    border:1px solid #0d6efd;
+    border:1px solid black;
 }
 .main-container{
     background-color:none;
@@ -64,6 +64,15 @@ margin-left:10px;
     margin-left:40px;
 }
 
+.btn{
+    margin-left:10px;
+  
+}
+
+.button{
+
+}
+
 </style>
 </head>
 <body>
@@ -78,9 +87,9 @@ margin-left:10px;
 
         <div class="button-containers">
 
-            <button class="btn btn-outline-primary px-5">Edit Profile</button>
+            <button class="btn btn-outline-primary px-5 button">Edit Profile</button>
             
-            <button class="btn btn-outline-primary px-5">See More</button>
+            <button class="btn btn-outline-primary px-5 button">See More</button>
         </div>
 
     </div>

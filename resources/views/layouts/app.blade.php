@@ -18,14 +18,97 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+     
+     .mlg-logo{
+        width:50px;
+    }
+    .logo-container{
+        display:flex;
+        align-items:center;
+        margin-left:-192px;
+    }
+    .logo-text{
+        display:flex;
+        flex-direction:column;
+        margin-left:15px;
+
+    }
+    
+     .logo-text .navbar-brand{
+     
+        color:white;
+    }
+    .logo-text .navbar-brand:hover{
+     
+     color:whitesmoke;
+ }
+    .navbar-brand{
+        padding:0px;
+        font-size:18px;
+    }
+    
+    .mlgcl-fs{
+        font-size:30px;
+        
+    }
+  .links-right{
+      color:white;
+      text-decoration:none;
+      font-size:18px;
+    
+  }
+  .links-right:hover{
+      color:whitesmoke;
+  }
+  .navbar-nav{
+      position:absolute;
+      right:30px;
+  }
+  .back-color{
+      background-color:#0d6efd;
+      box-shadow:1px 1px 5px gray
+  }
+  .navbar{
+      box-shadow:1px 1px 5px gray;
+  }
+   
+   body{
+       background-color:whitesmoke;
+   }
+    </style>    
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+
+
+    
+        <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm back-color" >
+
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+
+
+                <!-- <a class="navbar-brand text-light" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
+                </a> -->
+
+                <div class="logo-container">
+                <a href="#">
+                    <img src="image/mlg-logo.png" class="mlg-logo">
                 </a>
+                <div class="logo-text">
+
+                    <a class="navbar-brand mlgcl-fs" href="#">MLGCL</a>
+                    <a class="navbar-brand" href="#">COVID-19 CONTACT TRACING SYSTEM</a>
+
+                </div>
+
+            </div>
+
+
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -39,13 +122,14 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link text-light links-right" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link text-light links-right" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else

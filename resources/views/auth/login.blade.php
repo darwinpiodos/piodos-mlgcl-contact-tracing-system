@@ -8,88 +8,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-<style>
-    
-    .mlg-logo{
-        width:50px;
-    }
-    .logo-container{
-        display:flex;
-        align-items:center;
-    }
-    .logo-text{
-        display:flex;
-        flex-direction:column;
-        margin-left:15px;
 
-    }
-    
-     .logo-text .navbar-brand{
-     
-        color:white;
-    }
-    .logo-text .navbar-brand:hover{
-     
-     color:whitesmoke;
- }
-    .navbar-brand{
-        padding:0px;
-        font-size:18px;
-    }
-    
-    .mlgcl-fs{
-        font-size:30px;
-        
-    }
-  .links-right{
-      color:white;
-      text-decoration:none;
-      font-size:18px;
-      margin-left:20px;
-  }
-  .links-right:hover{
-      color:whitesmoke;
-  }
-  .navbar-nav{
-      position:absolute;
-      right:30px;
-  }
-  .back-color{
-      background-color:#03c2fc;
-  }
-  .navbar{
-      box-shadow:1px 1px 5px gray;
-  }
-   
-</style>
 
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<style>
+    .margin-top{
+        margin-top:5%;
+    }
+
+    .card-header{
+        font-size:30px;
+    }
+
+
+    .card-body{
+        margin-top:4%;
+    }
+    .btn{
+        width:100%;
+        height:50px;
+       
+    }
+</style>
+
+
 </head>
+
+
 <body>
     
 
 
 
-
-
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
-</html>
-
-
-
 @extends('layouts.app')
-@extends('navbar')
 
 
 @section('content')
-<div class="container">
+<div class="container margin-top">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">{{ __('Login') }} to your Account</div> 
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -136,7 +97,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                            <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
@@ -155,3 +116,12 @@
     </div>
 </div>
 @endsection
+
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
+

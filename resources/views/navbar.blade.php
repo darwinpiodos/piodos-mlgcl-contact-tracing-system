@@ -54,12 +54,15 @@
       right:30px;
   }
   .back-color{
-      background-color:#03c2fc;
+      background-color:#0d6efd;
   }
   .navbar{
-      box-shadow:1px 1px 5px gray;
+      /* box-shadow:1px 1px 5px gray; */
   }
    
+   body{
+       background-color:whitesmoke;
+   }
 </style>
 </head>
 <body>
