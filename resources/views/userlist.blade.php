@@ -49,7 +49,8 @@
 
 <table class="table">
   <thead>
-    <tr>
+
+  <tr>
       <th scope="col">Photo</th>
       <th scope="col">User Name</th>
       <th scope="col">Mobile Number</th>
@@ -60,17 +61,26 @@
     </tr>
   </thead>
   <tbody>
+  @foreach($users as $user)
+  
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">
+        <img src="{{ asset('uploads/files/$user->profile_picture') }}" alt="{{$user->profile_picture}}">
+     </th> 
+      <td>{{$user->name}}</td>
+      <td>{{$user->phone}}</td>
+      <td>{{$user->email}}</td>
+      <td>{{$user->id}}</td>
+      <td>
+        <button class="btn btn-success">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+      </td>
+      <td>
+        <button class="btn btn-primary"><a href=" {{('login?login_id=$user->id')}}" class="text-decoration-none text-light">Login</a> </button>
+      </td>
      
     </tr>
-   
+  @endforeach
   </tbody>
 </table>
 

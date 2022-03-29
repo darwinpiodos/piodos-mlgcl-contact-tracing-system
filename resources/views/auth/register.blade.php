@@ -85,6 +85,30 @@
                             </div>
                         </div>
 
+
+
+
+                        <div class="form-group row">
+                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Mobile Number') }}</label>
+
+                            <div class="col-md-6">
+
+                            <!-- <input id="address" type="text" class="form-control" name="address" value="{{ old('address') }}" required> -->
+
+                                <input id="phone" type="tel" class="form-control" name="phone" value="{{ old('phone') }}" required >
+
+                                <!-- @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror -->
+                            </div>
+
+
+                        </div>
+
+
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
@@ -106,6 +130,24 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+
+
+                        <div class="form-group{{ $errors->has('profile_picture') ? ' has-error' : '' }}">
+                        
+                                <label for="name" class="col-md-4 control-label">{{ __('Upload Picture') }}</label>
+
+                                <input id="profilePicture" type="file" class="form-control" name="profile_picture">
+
+                                @if ($errors->has('profile_picture'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('profile_picture') }}</strong>
+                                    </span>
+                                @endif
+                        </div>
+
+
+
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

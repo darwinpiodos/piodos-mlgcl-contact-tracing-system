@@ -55,6 +55,10 @@ Route::get('/navbar', function () {
  Route::get('/successful', function () {
     return view('successful');
  }); 
- Route::get('/userlist', function () {
-    return view('userlist');
- }); 
+//  Route::get('/userlist', function () {
+//     return view('userlist');
+//  }); 
+
+ Route::get('/userlist', 'UserListController@index'); 
+
+//  Route::get('userlist', [UserListController::class, 'userlist']);
