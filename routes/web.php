@@ -31,30 +31,48 @@ Route::get('/navbar', function () {
     return view('navbar');
  }); 
 
+
+
  Route::get('/adminprofile', function () {
     return view('adminprofile');
  }); 
+
+
  Route::get('/editprofile', function () {
     return view('editprofile');
  }); 
+
+
  Route::get('/index', function () {
     return view('index');
  }); 
+
+
  Route::get('/profile', function () {
     return view('profile');
  }); 
+
+
  Route::get('/review', function () {
     return view('review');
  }); 
+
+
  Route::get('/seemore', function () {
     return view('seemore');
  }); 
+
+
  Route::get('/sidebar', function () {
     return view('sidebar');
  }); 
+
+
  Route::get('/successful', function () {
     return view('successful');
  }); 
+
+ 
 //  Route::get('/userlist', function () {
 //     return view('userlist');
 //  }); 

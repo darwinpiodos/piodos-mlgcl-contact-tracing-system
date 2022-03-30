@@ -28,7 +28,7 @@
     .logo-container{
         display:flex;
         align-items:center;
-        margin-left:-192px;
+        margin-left:;
     }
     .logo-text{
         display:flex;
@@ -81,6 +81,16 @@
    .name-user{
        color:white;
    }
+
+   /* .navbar-nav{
+    position: absolute  !important;
+    right: 30px;
+    background-color: cornflowerblue  !important;
+    margin-top: 8px;
+    right: 0px;
+    width: 34%;
+    height: 126%;
+   } */
     </style>    
 </head>
 <body>
@@ -90,7 +100,7 @@
     
         <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm back-color" >
 
-            <div class="container">
+            <div class="container-fluid">
 
 
                 <!-- <a class="navbar-brand text-light" href="{{ url('/') }}">
@@ -112,23 +122,23 @@
 
 
                 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler text-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon text-light"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto text-light ">
                         <!-- Authentication Links -->
 
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link text-light links-right" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link text-light links-right " href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">

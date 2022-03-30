@@ -41,20 +41,18 @@
         
     }
   .links-right{
-      color:white;
+    
       text-decoration:none;
       font-size:18px;
       margin-left:20px;
   }
-  .links-right:hover{
-      color:whitesmoke;
-  }
+
   .navbar-nav{
       position:absolute;
       right:30px;
   }
   .back-color{
-      background-color:#0d6efd;
+      background-color:white;
   }
   .navbar{
       /* box-shadow:1px 1px 5px gray; */
