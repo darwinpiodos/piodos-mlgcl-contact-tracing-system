@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLGCL | Admin Profile | COVID-19 Contact Tracing System</title>
+    <title>MLGCL | Admin Settings | COVID-19 Contact Tracing System</title>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/0578c82be0.js" crossorigin="anonymous"></script>
@@ -94,9 +94,9 @@
 
             <a href="{{url('admindashboard')}}" class="links-profile navs-item links-dashboard"><div class=" bg-dash"><i class="fa brands fa-windows icon-right"></i>Dashboard</div></a>
 
-            <a href="{{url('adminprofile')}}" class="links-profile navs-item" style="background-color:whitesmoke; color:#47494a"><div class=" bg-profile"><i class="fa solid fa-user icon-right"></i>Profile</div></a>
+            <a href="{{url('adminprofile')}}" class="links-profile navs-item"><div class=" bg-profile"><i class="fa solid fa-user icon-right"></i>Profile</div></a>
 
-            <a href="{{url('adminsettings')}}" class="links-profile navs-item"><div class=" bg-settings"><i class="fa solid fa-wrench icon-right"></i>Settings</div></a>
+            <a href="{{url('adminsettings')}}" class="links-profile navs-item" style="background-color:whitesmoke; color:#47494a"><div class=" bg-settings"><i class="fa solid fa-wrench icon-right"></i>Settings</div></a>
 
             <a href="{{url('adminlist')}}" class="links-profile navs-item"><div class=" bg-list"> <i class="fa solid fa-database icon-right"></i>Users List</div></a>
 

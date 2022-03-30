@@ -92,7 +92,7 @@
 
             <div class="row">
 
-            <a href="{{url('admindashboard')}}" class="links-profile navs-item links-dashboard"><div class=" bg-dash"><i class="fa brands fa-windows icon-right"></i>Dashboard</div></a>
+            <a href="{{url('admindashboard')}}" class="links-profile navs-item links-dashboard" style="background-color:whitesmoke; color:#47494a"><div class=" bg-dash"><i class="fa brands fa-windows icon-right"></i>Dashboard</div></a>
 
             <a href="{{url('adminprofile')}}" class="links-profile navs-item"><div class=" bg-profile"><i class="fa solid fa-user icon-right"></i>Profile</div></a>
 
