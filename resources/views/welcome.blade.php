@@ -61,6 +61,15 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .nav-item a{
+       color:white;
+   }
+
+   .nav-item a:hover{
+       color:whitesmoke;
+   }
+
         </style>
     </head>
     <body>

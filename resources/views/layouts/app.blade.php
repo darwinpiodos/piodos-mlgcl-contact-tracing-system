@@ -68,7 +68,7 @@
       right:30px;
   }
   .back-color{
-      background-color:#0d6efd;
+      background-color:#0299eb;
       box-shadow:1px 1px 5px gray
   }
   .navbar{
@@ -81,7 +81,9 @@
    .name-user{
        color:white;
    }
-
+   .nav-item a{
+       color:white;
+   }
    /* .navbar-nav{
     position: absolute  !important;
     right: 30px;
@@ -98,7 +100,7 @@
 
 
     
-        <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm back-color" >
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm back-color" >
 
             <div class="container-fluid">
 

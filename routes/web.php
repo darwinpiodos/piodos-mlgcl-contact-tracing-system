@@ -32,12 +32,6 @@ Route::get('/navbar', function () {
  }); 
 
 
-
- Route::get('/adminprofile', function () {
-    return view('adminprofile');
- }); 
-
-
  Route::get('/editprofile', function () {
     return view('editprofile');
  }); 
@@ -80,3 +74,25 @@ Route::get('/navbar', function () {
  Route::get('/userlist', 'UserListController@index'); 
 
 //  Route::get('userlist', [UserListController::class, 'userlist']);
+
+
+
+// // // // Adminsssssssssssss Adminssssssssssss // // // // 
+Route::get('/admindashboard', function () {
+   return view('admindashboard');
+}); 
+
+
+Route::get('/adminprofile', function () {
+   return view('adminprofile');
+}); 
+
+
+Route::get('/adminsettings', function () {
+   return view('adminsettings');
+}); 
+
+
+Route::get('/adminlist', function () {
+   return view('adminlist');
+}); 

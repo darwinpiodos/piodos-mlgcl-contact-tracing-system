@@ -52,7 +52,7 @@
       right:30px;
   }
   .back-color{
-      background-color:white;
+      background-color:#0299eb;
   }
   .navbar{
       /* box-shadow:1px 1px 5px gray; */
@@ -69,7 +69,7 @@
 <div class="container-fluid px-0">
 
 
-        <nav class="navbar navbar-expand-lg navbar-light  my-0 back-color">
+        <nav class="navbar navbar-expand-lg navbar-light  my-0 back-color ">
         <div class="container-fluid">
 
             <div class="logo-container">
