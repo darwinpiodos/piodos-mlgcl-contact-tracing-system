@@ -12,10 +12,26 @@
 
 <script src="https://kit.fontawesome.com/0578c82be0.js" crossorigin="anonymous"></script>
 
+<style>
+    .navbar-brand{
+        padding:0px;
+        font-size:15px !important;
+        font-weight:600;
+        color:white !important;
+    }
+    
+    .mlgcl-fs{
+        font-size:20px !important;
+        font-weight:600;
+        margin-bottom:-7px !important;
+        color:white !important;
+        
+    }
+
+</style>
 </head>
 <body>
 @include('layouts.app')
-@extends('footer')
 
     
 <div class="container-fluid">
@@ -44,6 +60,7 @@ We aim to manage the spread of COVID-19 to keep our students, instructors and st
                     <a href="{{url('/login')}}"><button class="btn btn ms-4 fw-bold" style="background-color:#0299eb;color:white; border-radius:50px;  padding:10px 45px;"><i class="fa solid fa-database me-2"></i>Admin</button></a>   
 
                 </div>
+                
                
             </div>
             <div class="row ms-5">
@@ -68,6 +85,7 @@ We aim to manage the spread of COVID-19 to keep our students, instructors and st
     </div>
 </div>
 
+@include('footer')
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

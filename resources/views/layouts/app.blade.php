@@ -60,20 +60,7 @@ body{
      color:whitesmoke;
  }
 
-    .navbar-brand{
-        padding:0px;
-        font-size:15px;
-        font-weight:600;
-        color:white !important;
-    }
     
-    .mlgcl-fs{
-        font-size:20px;
-        font-weight:600;
-        margin-bottom:-7px;
-        color:white !important;
-        
-    }
   
   .navbar-nav{
       position:absolute;
@@ -109,6 +96,21 @@ body{
     color:white;
 }
 
+.navbar-brand{
+        padding:0px;
+        font-size:15px !important;
+        font-weight:600;
+        color:white !important;
+    }
+    
+    .mlgcl-fs{
+        font-size:20px !important;
+        font-weight:600;
+        /* margin-bottom:-7px !important; */
+        color:white !important;
+        
+    }
+
 
     </style>    
 </head>
@@ -132,8 +134,8 @@ body{
                 </a>
                 <div class="logo-text">
 
-                    <a class="navbar-brand mlgcl-fs" href="#">MLGCL</a>
-                    <a class="navbar-brand" href="#">COVID-19 CONTACT TRACING SYSTEM</a>
+                    <a class="navbar-brand mlgcl-fs" href="{{('/')}}">MLGCL</a>
+                    <a class="navbar-brand" href="{{('/')}}">COVID-19 CONTACT TRACING SYSTEM</a>
 
                 </div>
 

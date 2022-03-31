@@ -19,6 +19,22 @@ body{
         
         font-family: 'Poppins', sans-serif;
     }
+
+    .navbar-brand{
+        font-size:15px !important;
+        font-weight:600;
+        color:white !important;
+    }
+    
+    .mlgcl-fs{
+        font-size:20px !important;
+        font-weight:600;
+        margin-bottom:-7px !important;
+        color:white !important;
+        
+    }
+    
+
     
 </style>
 </head>

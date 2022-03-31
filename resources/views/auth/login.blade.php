@@ -15,7 +15,7 @@
 
 <style>
     .margin-top{
-        margin-top:5%;
+        margin-top:4%;
     }
 
     .card-header{
@@ -41,6 +41,7 @@
     
 
 
+@extends('footer')
 
 @extends('layouts.app')
 
@@ -51,28 +52,35 @@
 
 
 
-<div class="container margin-top">
+<div class="container-fluid margin-top" >
+
     <div class="row">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }} to your Account</div> 
+        
+        <div class="col-12 col-lg-12 col-md-12  d-flex flex-column justify-content-center align-items-center mb-5" >
 
-                <div class="card-body">
-                    
+            <div class="card" style="box-shadow:0px 0px 5px #c7c8c9; padding:15px;">
 
 
-
-
-
+                        <div class="photo mt-3 mb-0"  style="margin:0 auto; border-radius:50%;">
+                            <img src="image/user.jpg" alt="darwin-piodos-image" width="100px"style="border-radius:50%;">
+                        </div>
                 
-                    <form method="POST" action="{{ route('login') }}">
+
+                <!-- <div class="card-body"> -->
+                    
+                    <form method="POST" action="{{ route('login') }}" class="">
                         @csrf
 
-                        <div class="form-group row d-flex">
-                            <!-- <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label> -->
+                        <!-- <div class="form-group row "> -->
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="enter email">
+                        
+                            <label for="email" class="col-md-4 col-form-label text-md-right" style="color:white;">{{ __('') }}</label>
+
+                            <div class="col-md-12">
+
+                            <div class="fs-3" style="margin-bottom:5%; font-weight:bold; color:#3d3d3d;">{{ __('Sign In') }}</div>
+
+                                <input style="width:350px;" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="enter email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -80,12 +88,13 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        <!-- </div> -->
 
-                        <div class="form-group row ">
-                            <!-- <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label> -->
+                        <!-- <div class="form-group row "> -->
 
-                            <div class="col-md-6">
+                            <label style="color:white;" for="password" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
+
+                            <div class="col-md-12">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="enter password">
 
                                 @error('password')
@@ -94,10 +103,10 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        <!-- </div> -->
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-12 text-center mt-3">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -109,25 +118,25 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                        <!-- <div class="form-group row mb-0"> -->
+                            <div class="col-md-12 ">
+                                <button type="submit" class="btn btn" style="background-color:#0299eb; color:white;font-weight:600; letter-spacing:1px;">
+                                    {{ __('SIGN IN') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link text-decoration-none mt-2" href="{{ route('password.request') }} " style="color:#0299eb;>">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
                             </div>
-                        </div>
+                        <!-- </div> -->
                     </form>
 
 
 
 
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
