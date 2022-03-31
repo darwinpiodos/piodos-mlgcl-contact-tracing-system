@@ -7,19 +7,31 @@
     <title>MLGCL COVID-19 Contact Tracing System | Navigation Bar</title>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+
 <style>
+
+body{
+        background-color:#eee;
+        font-family: 'Poppins', sans-serif;
+    }
     
     .mlg-logo{
-        width:50px;
+        width:40px;
     }
     .logo-container{
         display:flex;
         align-items:center;
+        margin-left:5%;
     }
     .logo-text{
         display:flex;
         flex-direction:column;
-        margin-left:15px;
+        margin-left:8px;
 
     }
     
@@ -31,22 +43,32 @@
      
      color:whitesmoke;
  }
+
     .navbar-brand{
         padding:0px;
-        font-size:18px;
+        font-size:15px;
+        font-weight:600;
     }
     
     .mlgcl-fs{
-        font-size:30px;
+        font-size:20px;
+        font-weight:600;
+        margin-bottom:-7px;
         
     }
   .links-right{
     
       text-decoration:none;
-      font-size:18px;
+      font-size:16px;
       margin-left:20px;
+      color:white;
+      font-weight:bold;
   }
 
+
+  .links-right:hover{
+      color:whitesmoke;
+  }
   .navbar-nav{
       position:absolute;
       right:30px;
@@ -56,6 +78,7 @@
   }
   .navbar{
       /* box-shadow:1px 1px 5px gray; */
+      padding:15px 10px;
   }
    
    body{

@@ -20,20 +20,33 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+
+
     <style>
      
-     .mlg-logo{
-        width:50px;
+body{
+        background-color:white;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .mlg-logo{
+        width:40px;
     }
     .logo-container{
         display:flex;
         align-items:center;
-        margin-left:;
+        margin-left:5%;
     }
     .logo-text{
         display:flex;
         flex-direction:column;
-        margin-left:15px;
+        margin-left:8px;
 
     }
     
@@ -45,54 +58,55 @@
      
      color:whitesmoke;
  }
+
     .navbar-brand{
         padding:0px;
-        font-size:18px;
+        font-size:15px;
+        font-weight:600;
     }
     
     .mlgcl-fs{
-        font-size:30px;
+        font-size:20px;
+        font-weight:600;
+        margin-bottom:-7px;
         
     }
-  .links-right{
-      color:white;
-      text-decoration:none;
-      font-size:18px;
-    
-  }
-  .links-right:hover{
-      color:whitesmoke;
-  }
+  
   .navbar-nav{
       position:absolute;
-      right:30px;
+      right:22px;
   }
   .back-color{
       background-color:#0299eb;
-      box-shadow:1px 1px 5px gray
   }
   .navbar{
-      box-shadow:1px 1px 5px gray;
+      /* box-shadow:1px 1px 5px gray; */
+      padding:15px 10px;
   }
    
-   body{
-       background-color:whitesmoke;
-   }
-   .name-user{
-       color:white;
-   }
-   .nav-item a{
-       color:white;
-   }
-   /* .navbar-nav{
-    position: absolute  !important;
-    right: 30px;
-    background-color: cornflowerblue  !important;
-    margin-top: 8px;
-    right: 0px;
-    width: 34%;
-    height: 126%;
-   } */
+
+ 
+   .navbar-light .navbar-toggler-icon {
+
+    background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+}
+
+
+.links-right{
+    
+    text-decoration:none;
+    font-size:16px;
+    margin-left:4px;
+    color:white;
+    font-weight:bold;
+}
+
+
+.links-right:hover{
+    color:white;
+}
+
+
     </style>    
 </head>
 <body>
