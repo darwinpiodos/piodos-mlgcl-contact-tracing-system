@@ -33,6 +33,7 @@
 body{
         background-color:white;
         font-family: 'Poppins', sans-serif;
+        overflow-x:hidden;
     }
     
     .mlg-logo{
@@ -63,12 +64,14 @@ body{
         padding:0px;
         font-size:15px;
         font-weight:600;
+        color:white !important;
     }
     
     .mlgcl-fs{
         font-size:20px;
         font-weight:600;
         margin-bottom:-7px;
+        color:white !important;
         
     }
   

@@ -89,10 +89,10 @@ body{
 <body>
     
 
-<div class="container-fluid px-0">
+<div class="container-fluid px-0 ">
 
 
-        <nav class="navbar navbar-expand-lg navbar-light  my-0 back-color ">
+        <nav class="navbar navbar-expand-lg navbar-light  my-0 back-color fixed-bottom">
         <div class="container-fluid">
 
             <div class="logo-container">
@@ -145,6 +145,7 @@ body{
 
 
 
+        
 
 
 </div>

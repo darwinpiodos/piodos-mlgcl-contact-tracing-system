@@ -37,6 +37,9 @@ Route::get('/navbar', function () {
     return view('navbar');
  }); 
 
+ Route::get('/footer', function () {
+   return view('footer');
+}); 
 
  Route::get('/editprofile', function () {
     return view('editprofile');
