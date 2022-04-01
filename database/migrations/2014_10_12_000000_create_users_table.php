@@ -25,6 +25,19 @@ class CreateUsersTable extends Migration
 
             $table->string('profile_picture')->nullable();
 
+            $table->string('secondaryphone')->nullable();
+            $table->string('landlinephone')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('dmonth')->nullable();
+            $table->string('dday')->nullable();
+            $table->string('dyear')->nullable();
+            $table->string('province')->nullable();
+            $table->string('city_municipality')->nullable();
+            $table->string('zipcode')->nullable();
+            $table->string('barangay')->nullable();
+            $table->string('c_address')->nullable();
+
+
             $table->rememberToken();
             $table->timestamps();
         });

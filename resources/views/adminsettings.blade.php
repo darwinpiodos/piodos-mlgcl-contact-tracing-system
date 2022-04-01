@@ -98,7 +98,7 @@
 
             <a href="{{url('adminsettings')}}" class="links-profile navs-item" style="background-color:whitesmoke; color:#47494a"><div class=" bg-settings"><i class="fa solid fa-wrench icon-right"></i>Settings</div></a>
 
-            <a href="{{url('adminlist')}}" class="links-profile navs-item"><div class=" bg-list"> <i class="fa solid fa-database icon-right"></i>Users List</div></a>
+            <a href="{{url('adminlist')}}" class="links-profile navs-item"><div class=" bg-list"> <i class="fa solid fa-database icon-right"></i>User List</div></a>
 
             </div>
 
@@ -119,7 +119,7 @@
 
 
                         <div class="col">
-                            Dashboard
+                            Settings
                         </div>
 
                         <div class="col d-flex" style="justify-content:flex-end;">

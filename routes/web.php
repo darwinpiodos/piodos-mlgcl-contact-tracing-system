@@ -80,7 +80,6 @@ Route::get('/navbar', function () {
 //     return view('userlist');
 //  }); 
 
- Route::get('/userlist', 'UserListController@index'); 
 
 //  Route::get('userlist', [UserListController::class, 'userlist']);
 
@@ -102,6 +101,11 @@ Route::get('/adminsettings', function () {
 }); 
 
 
-Route::get('/adminlist', function () {
-   return view('adminlist');
-}); 
+// Route::get('/adminlist', function () {
+//    return view('adminlist');
+// }); 
+
+
+Route::get('/adminlist', 'UserListController@index'); 
+
+// Route::get('/userlist', 'UserListController@show'); 

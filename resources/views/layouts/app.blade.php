@@ -129,7 +129,7 @@ body{
                 </a> -->
 
                 <div class="logo-container">
-                <a href="#">
+                <a href="{{('/')}}">
                     <img src="image/mlg-logo.png" class="mlg-logo">
                 </a>
                 <div class="logo-text">
@@ -175,7 +175,7 @@ body{
 
 
                                 <div class="dropdown-menu dropdown-menu-right name-user" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item text-secondary fw-bold" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}

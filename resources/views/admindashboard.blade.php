@@ -98,7 +98,7 @@
 
             <a href="{{url('adminsettings')}}" class="links-profile navs-item"><div class=" bg-settings"><i class="fa solid fa-wrench icon-right"></i>Settings</div></a>
 
-            <a href="{{url('adminlist')}}" class="links-profile navs-item"><div class=" bg-list"> <i class="fa solid fa-database icon-right"></i>Users List</div></a>
+            <a href="{{url('adminlist')}}" class="links-profile navs-item"><div class=" bg-list"> <i class="fa solid fa-database icon-right"></i>User List</div></a>
 
             </div>
 

@@ -80,8 +80,23 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'phone' => $data['phone'],
             'password' => Hash::make($data['password']),
-
             'profile_picture' => $data['profile_picture'],
+
+            'secondaryphone' => $data['secondaryphone'],
+            'landlinephone' => $data['landlinephone'],
+            'gender' => $data['gender'],
+            'dmonth' => $data['dmonth'],
+            'dday' => $data['dday'],
+            'dyear' => $data['dyear'],
+            'province' => $data['province'],
+            'city_municipality' => $data['city_municipality'],
+            'zipcode' => $data['zipcode'],
+            'barangay' => $data['barangay'],
+            'c_address' => $data['c_address'],
+
+
+
+        
 
         ]);
     }

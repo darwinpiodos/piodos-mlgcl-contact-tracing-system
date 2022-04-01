@@ -98,7 +98,7 @@
 
             <a href="{{url('adminsettings')}}" class="links-profile navs-item"><div class=" bg-settings"><i class="fa solid fa-wrench icon-right"></i>Settings</div></a>
 
-            <a href="{{url('adminlist')}}" class="links-profile navs-item" style="background-color:whitesmoke; color:#47494a"><div class=" bg-list"> <i class="fa solid fa-database icon-right"></i>Users List</div></a>
+            <a href="{{url('adminlist')}}" class="links-profile navs-item" style="background-color:whitesmoke; color:#47494a"><div class=" bg-list"> <i class="fa solid fa-database icon-right"></i>User List</div></a>
 
             </div>
 
@@ -119,7 +119,7 @@
 
 
                         <div class="col">
-                            Dashboard
+                            Database
                         </div>
 
                         <div class="col d-flex" style="justify-content:flex-end;">
@@ -140,9 +140,56 @@
             </div>
 
 
-            <div class="row bg-light m-4" style="box-shadow:0px 0px 10px #cfcfcf;font-size:14px;">
-                <div class="col m-2" style="color:#028ade">
+            <div class="row bg-light m-4" style="box-shadow:0px 0px 10px #cfcfcf;font-size:14px;" >
+                <div class="col m-2" style="color:#028ade"  >
                     <p>Announcements</p>
+
+                    
+<table class="table">
+  <thead>
+
+  <tr>
+      <th scope="col">Photo</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Mobile Number</th>
+      <th scope="col">Secondary Mobile Number</th>
+      <th scope="col">Email</th>
+      <th scope="col">User ID</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Date of Birth</th>
+      <th scope="col">Address</th>
+      <th scope="col">Zip Code</th>
+      <th scope="col">Current Address</th>
+      <th scope="col">Operation</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  @foreach($users as $user)
+  
+    <tr>
+      <th scope="row">
+        <img src="{{ asset('uploads/files/$user->profile_picture') }}" alt="{{$user->profile_picture}}">
+     </th> 
+      <td>{{$user->name}}</td>
+      <td>{{$user->phone}}</td>
+      <td>{{$user->email}}</td>
+      <td>{{$user->id}}</td>
+      <td>
+        <button class="btn btn-success">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+      </td>
+      <td>
+        <button class="btn btn-primary"><a href="{{('/admindashboard')}},{{$user->id}}" class="text-decoration-none text-light">Login</a> </button>
+
+      </td>
+     
+    </tr>
+  @endforeach
+  </tbody>
+</table>
+
                 </div>
             </div>
 

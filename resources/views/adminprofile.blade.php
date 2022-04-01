@@ -98,7 +98,7 @@
 
             <a href="{{url('adminsettings')}}" class="links-profile navs-item"><div class=" bg-settings"><i class="fa solid fa-wrench icon-right"></i>Settings</div></a>
 
-            <a href="{{url('adminlist')}}" class="links-profile navs-item"><div class=" bg-list"> <i class="fa solid fa-database icon-right"></i>Users List</div></a>
+            <a href="{{url('adminlist')}}" class="links-profile navs-item"><div class=" bg-list"> <i class="fa solid fa-database icon-right"></i>User List</div></a>
 
             </div>
 
@@ -119,7 +119,7 @@
 
 
                         <div class="col">
-                            Dashboard
+                            Profile
                         </div>
 
                         <div class="col d-flex" style="justify-content:flex-end;">
@@ -143,6 +143,8 @@
             <div class="row bg-light m-4" style="box-shadow:0px 0px 10px #cfcfcf;font-size:14px;">
                 <div class="col m-2" style="color:#028ade">
                     <p>Announcements</p>
+
+                    
                 </div>
             </div>
 
