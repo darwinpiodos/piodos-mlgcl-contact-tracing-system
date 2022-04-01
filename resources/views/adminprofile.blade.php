@@ -52,6 +52,12 @@
     margin-right:15px;
 }
 
+.image-container{
+    background-image:url("image/darwin-blue.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+}
     
 </style>
 </head>
@@ -109,7 +115,10 @@
 
         <!-- <div class="col-10 bg-light py-3" style="position:absolute;right:0px; box-shadow:0px 0px 4px #cfcfcf">
          -->
-        <div class="col-10 "style="position:absolute;right:0px;">
+
+
+         
+        <div class="col-10"style="position:absolute;right:0px;">
 
             <div class="row bg-light py-4 px-3" style="box-shadow:0px 0px 4px #cfcfcf">
 
@@ -140,9 +149,71 @@
             </div>
 
 
-            <div class="row bg-light m-4" style="box-shadow:0px 0px 10px #cfcfcf;font-size:14px;">
+            <div class="row bg-light m-4 p-2 d-flex align-items-center justify-content-center" style="box-shadow:0px 0px 10px #cfcfcf;font-size:14px;">
                 <div class="col m-2" style="color:#028ade">
-                    <p>Announcements</p>
+                    <p style="color:#3d4042;font-size:20px;font-weight:bold;">Admin Information</p>
+
+                   <div class="card">
+                       <div class="card-header pt-3 pb-3">
+                           <button class="btn btn-outline-secondary me-2">See More</button>
+                           <button class="btn btn-outline-secondary">Edit Profile</button>
+                       </div>
+                       <div class="card-body"style="color:#2e2e2e;">
+
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    
+                                    <div class="image-container" style="width:120px;height:120px;  ">
+                                   
+                                    </div>
+
+                                    <div class="col">
+                                        <p style="font-size:20px; font-weight:600; margin-top:3%;">Darwin Piodos</p>
+                                        <p class="m-0 p-0"><i class="fa solid fa-map me-2"></i>Eastern, Hilongos, Leyte</p>
+                                        <p class="m-0 p-0 "><i class="fa solid fa-phone me-2"></i>+639385334758</p>
+                                        <p class="m-0 p-0 "><i class="fa solid fa-envelope me-2"></i>darwinpiodos@gmail.com</p>
+                                    </div>
+                                   
+
+                                </div>
+
+                                <div class="col-lg-9">
+
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <p><a href="#" class=" text-secondary  text-decoration-none fw-bold fs-5"><i class="fa solid fa-address-card"></i></a>
+                                                   
+                                        </div>
+                                        <div class="card-body p-3">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="fw-bold">Birthday:</p>
+                                                    <p class="fw-bold">Gender:</p>
+                                                </div>
+                                                <div class="col">
+                                                    <p>October 22, 2000</p>
+                                                    <p>Male</p>
+                                                </div>
+                                                <div class="col">
+                                                    <p class="fw-bold">Current Address:</p>
+                                                    <p class="fw-bold">Mobile (Secondary):</p>
+                                                </div>
+                                                <div class="col">
+                                                    <p>Eastern, Hilongos, Leyte</p>
+                                                    <p>09482387654</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                       </div-card-body>
+                   </div>
+
+
+                    
 
                     
                 </div>

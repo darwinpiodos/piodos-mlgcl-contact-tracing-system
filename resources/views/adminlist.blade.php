@@ -144,44 +144,60 @@
                 <div class="col m-2" style="color:#028ade"  >
                     <p>Announcements</p>
 
-                    
-<table class="table">
+  
+                  
+                    <table class="table" style="   display: block;
+    overflow-x: auto; overflow-y: auto;
+    white-space: nowrap; cellpadding:0; cellspacing:0; height:45%; ">
   <thead>
 
   <tr>
-      <th scope="col">Photo</th>
-      <th scope="col">User Name</th>
-      <th scope="col">Mobile Number</th>
-      <th scope="col">Secondary Mobile Number</th>
-      <th scope="col">Email</th>
-      <th scope="col">User ID</th>
-      <th scope="col">Gender</th>
-      <th scope="col">Date of Birth</th>
-      <th scope="col">Address</th>
-      <th scope="col">Zip Code</th>
-      <th scope="col">Current Address</th>
-      <th scope="col">Operation</th>
-      <th scope="col">Action</th>
+      <th >User ID</th>
+      <th >Photo</th>
+      <th >Name</th>
+      <th >Email</th>
+      <th >Mobile Number</th>
+      <th >Secondary Mobile Number</th>
+      <th >Gender</th>
+      <th >Date of Birth</th>
+      <th >Address</th>
+      <th >Zip Code</th>
+      <th >Current Address</th>
+      <th >Operation</th>
+      <th >Action</th>
     </tr>
   </thead>
   <tbody>
 
   @foreach($users as $user)
-  
+ 
     <tr>
-      <th scope="row">
-        <img src="{{ asset('uploads/files/$user->profile_picture') }}" alt="{{$user->profile_picture}}">
-     </th> 
-      <td>{{$user->name}}</td>
-      <td>{{$user->phone}}</td>
-      <td>{{$user->email}}</td>
-      <td>{{$user->id}}</td>
+
+      <th scope="row">{{$user->id}}</th> 
       <td>
-        <button class="btn btn-success">Edit</button>
-        <button class="btn btn-danger">Delete</button>
+        <img src="{{ asset('uploads/files/$user->profile_picture') }}" alt="{{$user->profile_picture}}">
+      </td>
+      <td>{{$user->name}}</td>
+      <td>{{$user->email}}</td>
+      <td>{{$user->phone}}</td>
+      <td>{{$user->secondaryphone}}</td>
+      <td>{{$user->gender}}</td>
+      <td>{{$user->dmonth}}<span> </span>{{$user->dday}}<span>, </span>{{$user->dyear}}</td>
+      <td>{{$user->barangay}}<span>, </span>{{$user->city_municipality}}<span>, </span>{{$user->province}}</td>
+      <td>{{$user->zipcode}}</td>
+      <td>{{$user->barangay}}<span>, </span>{{$user->city_municipality}}<span>, </span>{{$user->province}}</td>
+
+      <td>
+     <button class="btn btn-info me-2" style="font-size:12px;"> <i class="fa solid fa-pen  me-2"></i>Edit</button>
+        <button class="btn btn-danger " style="font-size:12px;"><i class="fa solid fa-trash  me-2"></i>Delete</button>
       </td>
       <td>
-        <button class="btn btn-primary"><a href="{{('/admindashboard')}},{{$user->id}}" class="text-decoration-none text-light">Login</a> </button>
+        <!-- <button class="btn btn-primary"><a href="{{$user->id}}" class="text-decoration-none text-light">Login</a> </button> -->
+
+        <button class="btn btn-primary" style="font-size:12px;"s><a href="{{ URL::to('adminprofile/'.$user->id) }}" class="text-decoration-none text-light"><i class="fa solid fa-unlock me-2"></i>Login</a> </button>
+
+
+        
 
       </td>
      
@@ -189,6 +205,10 @@
   @endforeach
   </tbody>
 </table>
+
+
+
+                    
 
                 </div>
             </div>

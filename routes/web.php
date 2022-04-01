@@ -109,3 +109,4 @@ Route::get('/adminsettings', function () {
 Route::get('/adminlist', 'UserListController@index'); 
 
 // Route::get('/userlist', 'UserListController@show'); 
+

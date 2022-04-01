@@ -23,12 +23,20 @@ class UserListController extends Controller
         
     }
 
-    public function show($id){
 
-        $users =User::where('id',$id)->first();
+    // public function store($id){
+
+    //     return $id;
+
+
+    // }
+
+    // public function show($id){
+
+    //     $users =User::where('id',$id)->first();
         
-        return view('adminlist',compact('id'));
-    }
+    //     return view('adminprofile',compact('id'));
+    // }
 
 
     
