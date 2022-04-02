@@ -54,7 +54,7 @@ body{
     <div class="col">
         <div class="row">
 
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <p style="font-weight:bold;font-size:11px; color:white;">i love my classmates</p>
 
             </div>
@@ -62,10 +62,12 @@ body{
                 <p style="font-weight:bold;font-size:11px;">powered by</p>
                 <img src="image/piodoxweb.png" alt="" width="150px">
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <p style="font-weight:bold;font-size:11px;">in partnership with</p>
                 <img src="image/hilongos-logo.png" alt="" width="56px">
                 <img src="image/leyte-logo.png" alt="" width="55px" class="ms-4">
+                <img src="image/doh-logo.png" alt="" width="55px" class="ms-4">
+
             </div>
            
         </div>

@@ -52,6 +52,13 @@
     margin-right:15px;
 }
 
+#small-profile{
+    background-image:url("image/darwin-piodos.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+}
+
     
 </style>
 </head>
@@ -127,8 +134,8 @@
                             <div class="icon"><i class="fa solid fa-bell"></i></div>
                                 <div class="border-left" style="margin-left:10px;"> | </div>
                                 <div class="username" style="margin-left:10px;">Darwin Divino Piodos</div>
-                                <div class="user profilephoto">
-                                    <img src="image/darwin-piodos.jpg" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;">
+                                <div class="user profilephoto" style="width:30px;height:30px;background-color:whitesmoke;margin-left:10px; border-radius:50%; " id="small-profile">
+                                    <!-- <img src="image/darwin-piodos.jpg" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;"> -->
                                 </div>
                             </div>
                         
@@ -142,13 +149,13 @@
 
             <div class="row bg-light m-4" style="box-shadow:0px 0px 10px #cfcfcf;font-size:14px;" >
                 <div class="col m-2" style="color:#028ade"  >
-                    <p>Announcements</p>
+                      <p style="color:#3d4042;font-size:20px;font-weight:bold; margin-left:10px;margin-top:10px;">Master List <a href="{{('register')}}"><button class="btn btn-outline-secondary ms-4" style="font-size:14px;"><i class="fa solid fa-plus me-2"></i>Add New</button></a></p>
 
   
                   
                     <table class="table" style="   display: block;
     overflow-x: auto; overflow-y: auto;
-    white-space: nowrap; cellpadding:0; cellspacing:0; height:45%; ">
+    white-space: nowrap; cellpadding:0; cellspacing:0; height:50%; padding:10px;">
   <thead>
 
   <tr>
@@ -185,7 +192,7 @@
       <td>{{$user->dmonth}}<span> </span>{{$user->dday}}<span>, </span>{{$user->dyear}}</td>
       <td>{{$user->barangay}}<span>, </span>{{$user->city_municipality}}<span>, </span>{{$user->province}}</td>
       <td>{{$user->zipcode}}</td>
-      <td>{{$user->barangay}}<span>, </span>{{$user->city_municipality}}<span>, </span>{{$user->province}}</td>
+      <td>{{$user->c_address}}</td>
 
       <td>
      <button class="btn btn-info me-2" style="font-size:12px;"> <i class="fa solid fa-pen  me-2"></i>Edit</button>

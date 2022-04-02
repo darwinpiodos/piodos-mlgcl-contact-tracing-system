@@ -52,6 +52,14 @@
     margin-right:15px;
 }
 
+#small-profile{
+    background-image:url("image/darwin-piodos.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+}
+
+
     
 </style>
 </head>
@@ -127,8 +135,8 @@
                             <div class="icon"><i class="fa solid fa-bell"></i></div>
                                 <div class="border-left" style="margin-left:10px;"> | </div>
                                 <div class="username" style="margin-left:10px;">Darwin Divino Piodos</div>
-                                <div class="user profilephoto">
-                                    <img src="image/darwin-piodos.jpg" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;">
+                                <div class="user profilephoto" style="width:30px;height:30px;background-color:whitesmoke;margin-left:10px; border-radius:50%; " id="small-profile">
+                                    <!-- <img src="image/darwin-piodos.jpg" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;"> -->
                                 </div>
                             </div>
                         

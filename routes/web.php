@@ -13,25 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 
 Route::get('/', function () {
    return view('index');
 });
 
 
+
+
+
 Auth::routes();
 
+
+
+
+
+
 Route::get('/home', 'HomeController@index')->name('home');
-
-
-
-
-
-
 
 Route::get('/navbar', function () {
     return view('navbar');
@@ -76,16 +74,6 @@ Route::get('/navbar', function () {
  }); 
 
  
-//  Route::get('/userlist', function () {
-//     return view('userlist');
-//  }); 
-
-
-//  Route::get('userlist', [UserListController::class, 'userlist']);
-
-
-
-// // // // Adminsssssssssssss Adminssssssssssss // // // // 
 Route::get('/admindashboard', function () {
    return view('admindashboard');
 }); 
@@ -101,12 +89,7 @@ Route::get('/adminsettings', function () {
 }); 
 
 
-// Route::get('/adminlist', function () {
-//    return view('adminlist');
-// }); 
-
 
 Route::get('/adminlist', 'UserListController@index'); 
 
-// Route::get('/userlist', 'UserListController@show'); 
-
+ 
