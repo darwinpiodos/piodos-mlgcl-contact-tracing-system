@@ -79,9 +79,20 @@ Route::get('/admindashboard', function () {
 }); 
 
 
+
+
+// Route::get('/adminprofile', function () {
+//    return view('adminprofile');
+// }); 
+
+
 Route::get('/adminprofile', function () {
    return view('adminprofile');
 }); 
+
+// Route::get('adminprofile/{id}','LoginController@find')->name('user.get');
+
+
 
 
 Route::get('/adminsettings', function () {

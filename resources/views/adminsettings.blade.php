@@ -65,7 +65,7 @@
 </head>
 <body>
 
-
+@extends('layouts.app')
 
 <div class="container-fluid bg-secondary">
 

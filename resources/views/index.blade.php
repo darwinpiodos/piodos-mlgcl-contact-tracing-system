@@ -48,7 +48,7 @@
 </style>
 </head>
 <body>
-@include('layouts.app')
+@include('layouts.appear')
 
     
 <div class="container-fluid">
@@ -157,6 +157,7 @@ We aim to manage the spread of COVID-19 to keep our students, instructors and st
             <div class="row">
                 <div class="col">
                     <img src="image/doctor.gif"alt="Health Gif">
+                    <!-- <img src="image/birds.gif"alt="Health Gif" style="position:absolute;left:40%;top:-20%;width:300px;"> -->
                 </div>
             </div>
 

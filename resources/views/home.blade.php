@@ -26,7 +26,7 @@
 
  
 
-@extends('layouts.app')
+@extends('layouts.appear')
 
 @section('content')
 <div class="container">

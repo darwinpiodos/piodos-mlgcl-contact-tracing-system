@@ -115,7 +115,7 @@ body{
     </style>    
 </head>
 <body>
-    <div id="app" style="z-index:-10;visibility:hidden;">
+    <div id="app">
 
 
     

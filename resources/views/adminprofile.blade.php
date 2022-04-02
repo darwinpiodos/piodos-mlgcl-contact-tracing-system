@@ -72,7 +72,9 @@
 
 
 
-<div class="container-fluid bg-secondary">
+@extends('layouts.app')
+
+<div class="container-fluid">
 
     <div class="row">
 
@@ -127,11 +129,11 @@
          
         <div class="col-10"style="position:absolute;right:0px;">
 
-            <div class="row bg-light py-4 px-3" style="box-shadow:0px 0px 4px #cfcfcf">
+            <div class="row bg-light py-4 px-3" style="box-shadow:0px 0px 4px #cfcfcf;z-index:1; background-color:white;" >
 
-                <div class="col">
+                <div class="col"  >
                     
-                    <div class="row">
+                    <div class="row" style="z-index:100; background-color:;">
 
 
                         <div class="col">
@@ -140,13 +142,15 @@
 
                         <div class="col d-flex" style="justify-content:flex-end;">
                             
-                            <div class="icon"><i class="fa solid fa-bell"></i></div>
+                            <div class="icon"><i class="fa solid fa-bell"></i>
+                            </div>
+
                                 <div class="border-left" style="margin-left:10px;"> | </div>
-                                <div class="username" style="margin-left:10px;">Darwin Divino Piodos</div>
+                                <div class="username" style="margin-left:10px;"> {{ Auth::user()->name }}</div>
                                 <div class="user profilephoto" style="width:30px;height:30px;background-color:whitesmoke;margin-left:10px; border-radius:50%; " id="small-profile">
                                     <!-- <img src="image/darwin-piodos.jpg" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;"> -->
                                 </div>
-                            </div>
+                        </div>
                         
 
                     </div>
@@ -168,23 +172,24 @@
                        <div class="card-body"style="color:#2e2e2e;">
 
                             <div class="row">
-                                <div class="col-lg-3">
+                                <div class="col-lg-4">
                                     
                                     <div class="image-container" style="width:120px;height:120px;  ">
                                    
                                     </div>
 
                                     <div class="col">
-                                        <p style="font-size:20px; font-weight:600; margin-top:3%;">Darwin Piodos</p>
-                                        <p class="m-0 p-0"><i class="fa solid fa-map me-2"></i>Eastern, Hilongos, Leyte</p>
-                                        <p class="m-0 p-0 "><i class="fa solid fa-phone me-2"></i>+639385334758</p>
-                                        <p class="m-0 p-0 "><i class="fa solid fa-envelope me-2"></i>darwinpiodos@gmail.com</p>
+                                        <p style="font-size:20px; font-weight:600; margin-top:3%;"> {{ Auth::user()->name }}</p>
+                                        <p class="m-0 p-0"><i class="fa solid fa-map me-2"></i> {{ Auth::user()->c_address }}</p>
+                                        <p class="m-0 p-0 "><i class="fa solid fa-phone me-2"></i> {{ Auth::user()->phone }}</p>
+                                        <p class="m-0 p-0 "><i class="fa solid fa-envelope me-2"></i> {{ Auth::user()->email }}</p>
                                     </div>
                                    
 
                                 </div>
 
-                                <div class="col-lg-9">
+
+                                <div class="col-lg-8">
 
                                     <div class="card">
                                         <div class="card-header">
@@ -193,21 +198,32 @@
                                         </div>
                                         <div class="card-body p-3">
                                             <div class="row">
-                                                <div class="col">
+                                                <div class="col-lg-2">
                                                     <p class="fw-bold">Birthday:</p>
                                                     <p class="fw-bold">Gender:</p>
                                                 </div>
-                                                <div class="col">
-                                                    <p>October 22, 2000</p>
-                                                    <p>Male</p>
+                                                <div class="col-lg-3">
+                                                    <p>{{ Auth::user()->dmonth }}
+                                                        <span> </span>
+                                                    {{ Auth::user()->dday}}
+                                                    <span>,</span>
+                                                    {{ Auth::user()->dyear }}
+                                                    </p>
+                                                    <p> {{ Auth::user()->gender }}</p>
                                                 </div>
-                                                <div class="col">
+                                                <div class="col-lg-3">
                                                     <p class="fw-bold">Current Address:</p>
                                                     <p class="fw-bold">Mobile (Secondary):</p>
                                                 </div>
                                                 <div class="col">
-                                                    <p>Eastern, Hilongos, Leyte</p>
-                                                    <p>09482387654</p>
+                                                    <p>{{ Auth::user()->barangay }}
+                                                        <span> </span>
+                                                    {{ Auth::user()->city_municipality}}
+                                                    <span>,</span>
+                                                    {{ Auth::user()->province }}
+                                                    </p>
+                                                    </p>
+                                                    <p>{{ Auth::user()->secondaryphone }}</p>
                                                 </div>
                                             </div>
                                         </div>
