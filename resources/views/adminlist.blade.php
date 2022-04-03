@@ -64,7 +64,7 @@
 </head>
 <body>
 
-
+@extends('layouts.app')
 
 <div class="container-fluid bg-secondary">
 
@@ -99,13 +99,13 @@
 
             <div class="row">
 
-            <a href="{{url('admindashboard')}}" class="links-profile navs-item links-dashboard"><div class=" bg-dash"><i class="fa brands fa-windows icon-right"></i>Dashboard</div></a>
+            <a href="{{url('admindashboard')}}" class="links-profile navs-item links-dashboard text-decoration-none"><div class=" bg-dash"><i class="fa brands fa-windows icon-right ms-3"></i>Dashboard</div></a>
 
-            <a href="{{url('adminprofile')}}" class="links-profile navs-item"><div class=" bg-profile"><i class="fa solid fa-user icon-right"></i>Profile</div></a>
+            <a href="{{url('adminprofile')}}" class="links-profile navs-item text-decoration-none"><div class=" bg-profile"><i class="fa solid fa-user icon-right  ms-3"></i>Profile</div></a>
 
-            <a href="{{url('adminsettings')}}" class="links-profile navs-item"><div class=" bg-settings"><i class="fa solid fa-wrench icon-right"></i>Settings</div></a>
+            <a href="{{url('adminsettings')}}" class="links-profile navs-item text-decoration-none"><div class=" bg-settings"><i class="fa solid fa-wrench icon-right  ms-3"></i>Settings</div></a>
 
-            <a href="{{url('adminlist')}}" class="links-profile navs-item" style="background-color:whitesmoke; color:#47494a"><div class=" bg-list"> <i class="fa solid fa-database icon-right"></i>User List</div></a>
+            <a href="{{url('adminlist')}}" class="links-profile navs-item text-decoration-none" style="background-color:whitesmoke; color:#47494a"><div class=" bg-list"> <i class="fa solid fa-database icon-right ms-3"></i>User List</div></a>
 
             </div>
 
@@ -133,7 +133,7 @@
                             
                             <div class="icon"><i class="fa solid fa-bell"></i></div>
                                 <div class="border-left" style="margin-left:10px;"> | </div>
-                                <div class="username" style="margin-left:10px;">Darwin Divino Piodos</div>
+                                <div class="username" style="margin-left:10px;">{{ Auth::user()->name }}</div>
                                 <div class="user profilephoto" style="width:30px;height:30px;background-color:whitesmoke;margin-left:10px; border-radius:50%; " id="small-profile">
                                     <!-- <img src="image/darwin-piodos.jpg" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;"> -->
                                 </div>

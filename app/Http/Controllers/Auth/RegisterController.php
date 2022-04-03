@@ -29,7 +29,15 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = ('/adminprofile');
+
+
+    // protected function authenticated(Request $request, $user)
+    // {
+
+    //  return redirect('/adminprofile');
+    // }
+
 
     /**
      * Create a new controller instance.
@@ -69,13 +77,45 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
+    // protected function create(array $data)
+    // {
+
+    
+    //     return User::create([
+    //         'name' => $data['name'],
+    //         'email' => $data['email'],
+    //         'phone' => $data['phone'],
+    //         'password' => Hash::make($data['password']),
+    //         'profile_picture' => $data['profile_picture'],
+
+    //         'secondaryphone' => $data['secondaryphone'],
+    //         'landlinephone' => $data['landlinephone'],
+    //         'gender' => $data['gender'],
+    //         'dmonth' => $data['dmonth'],
+    //         'dday' => $data['dday'],
+    //         'dyear' => $data['dyear'],
+    //         'province' => $data['province'],
+    //         'city_municipality' => $data['city_municipality'],
+    //         'zipcode' => $data['zipcode'],
+    //         'barangay' => $data['barangay'],
+    //         'c_address' => $data['c_address'],
+
+
+
+        
+
+    //     ]);
+
+        
+    // }
+
+
+
     protected function create(array $data)
     {
 
-
-
-
-        return User::create([
+    
+        $user= User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
@@ -99,5 +139,20 @@ class RegisterController extends Controller
         
 
         ]);
+
+
+if (request()->hasfile('profile_picture')){
+$profile_picture =request()->file('profile_picture')->getClientOriginalName();
+request()->file('profile_picture')->storeAs('avatars',$user->id.'/'.$profile_picture,'');
+$user->update(['profile_picture'=>$profile_picture]);
+}
+
+return $user;
+
+
+        
     }
+
+  
+
 }

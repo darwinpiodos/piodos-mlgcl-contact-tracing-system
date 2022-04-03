@@ -15,6 +15,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 
+@extends('layouts.app')
+
 <style>
     body{
         background-color:#eee;
@@ -53,16 +55,22 @@
 }
 
 .image-container{
-    background-image:url("image/darwin-blue.png");
+    background-image:url("storage/avatars/{{ Auth::user()->id }}/{{ Auth::user()->profile_picture }}");
+    /* background-image:url("image/darwin-blue.png"); */
     background-repeat:no-repeat;
+    background-position: center center;
     background-size:cover;
     
 }
+
+/* <img src="storage/avatars/{{ Auth::user()->id }}/{{ Auth::user()->profile_picture }}" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;"> */
+
+
 #small-profile{
-    background-image:url("image/darwin-piodos.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
-    
+    background-image:url("storage/avatars/{{ Auth::user()->id }}/{{ Auth::user()->profile_picture }}");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
     
@@ -107,13 +115,13 @@
 
             <div class="row">
 
-            <a href="{{url('admindashboard')}}" class="links-profile navs-item links-dashboard"><div class=" bg-dash"><i class="fa brands fa-windows icon-right"></i>Dashboard</div></a>
+            <a href="{{url('admindashboard')}}" class="links-profile navs-item links-dashboard text-decoration-none"><div class=" bg-dash"><i class="fa brands fa-windows icon-right ms-3"></i>Dashboard</div></a>
 
-            <a href="{{url('adminprofile')}}" class="links-profile navs-item" style="background-color:whitesmoke; color:#47494a"><div class=" bg-profile"><i class="fa solid fa-user icon-right"></i>Profile</div></a>
+            <a href="{{url('adminprofile')}}" class="links-profile navs-item text-decoration-none" style="background-color:whitesmoke; color:#47494a"><div class=" bg-profile ms-3"><i class="fa solid fa-user icon-right"></i>Profile</div></a>
 
-            <a href="{{url('adminsettings')}}" class="links-profile navs-item"><div class=" bg-settings"><i class="fa solid fa-wrench icon-right"></i>Settings</div></a>
+            <a href="{{url('adminsettings')}}" class="links-profile navs-item text-decoration-none"><div class=" bg-settings"><i class="fa solid fa-wrench icon-right ms-3"></i>Settings</div></a>
 
-            <a href="{{url('adminlist')}}" class="links-profile navs-item"><div class=" bg-list"> <i class="fa solid fa-database icon-right"></i>User List</div></a>
+            <a href="{{url('adminlist')}}" class="links-profile navs-item text-decoration-none"><div class=" bg-list"> <i class="fa solid fa-database icon-right ms-3"></i>User List</div></a>
 
             </div>
 
@@ -147,6 +155,7 @@
 
                                 <div class="border-left" style="margin-left:10px;"> | </div>
                                 <div class="username" style="margin-left:10px;"> {{ Auth::user()->name }}</div>
+
                                 <div class="user profilephoto" style="width:30px;height:30px;background-color:whitesmoke;margin-left:10px; border-radius:50%; " id="small-profile">
                                     <!-- <img src="image/darwin-piodos.jpg" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;"> -->
                                 </div>
@@ -174,12 +183,37 @@
                             <div class="row">
                                 <div class="col-lg-4">
                                     
-                                    <div class="image-container" style="width:120px;height:120px;  ">
+                                    <div class="image-container ms-" style="width:120px;height:120px;  ">
                                    
                                     </div>
 
                                     <div class="col">
-                                        <p style="font-size:20px; font-weight:600; margin-top:3%;"> {{ Auth::user()->name }}</p>
+                                        <p style="font-size:20px; font-weight:600; margin-top:3%;"> {{ Auth::user()->name }}
+                                    
+                                        <!-- <img src="storage/avatars/28/darwin.jpeg" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;"> -->
+
+                                        <!-- <img src="storage/avatars/{{ Auth::user()->id }}/{{ Auth::user()->profile_picture }}" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;"> -->
+
+
+                                        <!-- <img src="{{ asset('avatars/24/' . Auth::user()->name) }}"> -->
+
+                                        <!-- <img src="{{ asset('app/avatars/25/') }}/{{  Auth::user()->profile_picture }}" class="" /> -->
+                                        
+                                         <!-- <img src="image/darwin-piodos.jpg" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;"> -->
+
+                                         <!-- <img src="{{ asset('storage/download.jpg') }}"> -->
+
+                                         <!-- <img src="" alt=""> -->
+                                           
+
+                                       <!-- <img src="storage/app/avatars/24/download.jpg" alt=""> -->
+
+                                       <!-- <img src="echo asset('storage/download.jpg');" alt="" srcset="">
+                                          -->
+                                         {{Auth::user()->id}}
+                                         
+
+                                    </p>
                                         <p class="m-0 p-0"><i class="fa solid fa-map me-2"></i> {{ Auth::user()->c_address }}</p>
                                         <p class="m-0 p-0 "><i class="fa solid fa-phone me-2"></i> {{ Auth::user()->phone }}</p>
                                         <p class="m-0 p-0 "><i class="fa solid fa-envelope me-2"></i> {{ Auth::user()->email }}</p>
@@ -217,7 +251,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <p>{{ Auth::user()->barangay }}
-                                                        <span> </span>
+                                                        <span>, </span>
                                                     {{ Auth::user()->city_municipality}}
                                                     <span>,</span>
                                                     {{ Auth::user()->province }}
