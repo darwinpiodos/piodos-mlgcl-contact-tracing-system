@@ -153,7 +153,7 @@
                             <div class="icon"><i class="fa solid fa-bell"></i>
                             </div>
 
-                                <div class="border-left" style="margin-left:10px;"> | </div>
+                                <div class="border-left" style="margin-left:10px;"></div>
                                 <div class="username" style="margin-left:10px;"> {{ Auth::user()->name }}</div>
 
                                 <div class="user profilephoto" style="width:30px;height:30px;background-color:whitesmoke;margin-left:10px; border-radius:50%; " id="small-profile">
@@ -210,8 +210,7 @@
 
                                        <!-- <img src="echo asset('storage/download.jpg');" alt="" srcset="">
                                           -->
-                                         {{Auth::user()->id}}
-                                         
+                                        
 
                                     </p>
                                         <p class="m-0 p-0"><i class="fa solid fa-map me-2"></i> {{ Auth::user()->c_address }}</p>

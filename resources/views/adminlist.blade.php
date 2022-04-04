@@ -19,6 +19,7 @@
     body{
         background-color:#eee;
         font-family: 'Poppins', sans-serif;
+      
     }
     
     .links-profile{
@@ -53,10 +54,10 @@
 }
 
 #small-profile{
-    background-image:url("image/darwin-piodos.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
-    
+    background-image:url("storage/avatars/{{ Auth::user()->id }}/{{ Auth::user()->profile_picture }}");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
     
@@ -132,7 +133,7 @@
                         <div class="col d-flex" style="justify-content:flex-end;">
                             
                             <div class="icon"><i class="fa solid fa-bell"></i></div>
-                                <div class="border-left" style="margin-left:10px;"> | </div>
+                                <div class="border-left" style="margin-left:10px;"></div>
                                 <div class="username" style="margin-left:10px;">{{ Auth::user()->name }}</div>
                                 <div class="user profilephoto" style="width:30px;height:30px;background-color:whitesmoke;margin-left:10px; border-radius:50%; " id="small-profile">
                                     <!-- <img src="image/darwin-piodos.jpg" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;"> -->
@@ -147,16 +148,21 @@
             </div>
 
 
-            <div class="row bg-light m-4" style="box-shadow:0px 0px 10px #cfcfcf;font-size:14px;" >
+            <div class="row bg-light m-4" style="box-shadow:0px 0px 10px #cfcfcf;font-size:14px;position:relative;" >
+
+         
+
                 <div class="col m-2" style="color:#028ade"  >
                       <p style="color:#3d4042;font-size:20px;font-weight:bold; margin-left:10px;margin-top:10px;">Master List <a href="{{('register')}}"><button class="btn btn-outline-secondary ms-4" style="font-size:14px;"><i class="fa solid fa-plus me-2"></i>Add New</button></a></p>
 
   
-                  
-                    <table class="table" style="   display: block;
-    overflow-x: auto; overflow-y: auto;
-    white-space: nowrap; cellpadding:0; cellspacing:0; height:50%; padding:10px;">
-  <thead>
+                  <div class="table-container" style="height:70vh;">
+
+
+                    <table class="table" style="display: inline-block; position:relative;height:100%;
+    overflow-x: scroll !important;flex:1;
+    white-space: nowrap; cellpadding:0; cellspacing:0;  padding:10px; width:100%; height:100%;">
+  <thead  style="">
 
   <tr>
       <th >User ID</th>
@@ -182,7 +188,12 @@
 
       <th scope="row">{{$user->id}}</th> 
       <td>
-        <img src="{{ asset('uploads/files/$user->profile_picture') }}" alt="{{$user->profile_picture}}">
+
+        <div style="width:50px;height:50px;background-color:whitesmoke;margin-left:10px; border-radius:50%;background-image:url(storage/avatars/{{$user->id}}/{{$user->profile_picture}});background-size:cover;background-repeat:no-repeat;background-position:center center;
+        " id="photo-profile">     
+
+        </div>
+
       </td>
       <td>{{$user->name}}</td>
       <td>{{$user->email}}</td>
@@ -195,9 +206,14 @@
       <td>{{$user->c_address}}</td>
 
       <td>
-     <button class="btn btn-info me-2" style="font-size:12px;"> <i class="fa solid fa-pen  me-2"></i>Edit</button>
+     <button class="btn btn-outline-success me-2" style="font-size:12px;"> <i class="fa solid fa-pen  me-2"></i>Edit</button>
+
+     <a href="delete/{{$user->id}}">
         <button class="btn btn-danger " style="font-size:12px;"><i class="fa solid fa-trash  me-2"></i>Delete</button>
+    </a>
       </td>
+
+
       <td>
         <!-- <button class="btn btn-primary"><a href="{{$user->id}}" class="text-decoration-none text-light">Login</a> </button> -->
 
@@ -212,6 +228,7 @@
   @endforeach
   </tbody>
 </table>
+</div><!--TableContainer-->
 
 
 

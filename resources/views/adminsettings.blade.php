@@ -53,15 +53,14 @@
 }
 
 #small-profile{
-    background-image:url("image/darwin-piodos.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
-    
+    background-image:url("storage/avatars/{{ Auth::user()->id }}/{{ Auth::user()->profile_picture }}");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
-*{
-    text-decoration:none;
-}
+
+
 
     
 </style>
@@ -136,7 +135,7 @@
                         <div class="col d-flex" style="justify-content:flex-end;">
                             
                             <div class="icon"><i class="fa solid fa-bell"></i></div>
-                                <div class="border-left" style="margin-left:10px;"> | </div>
+                                <div class="border-left" style="margin-left:10px;"></div>
                                 <div class="username" style="margin-left:10px;">{{ Auth::user()->name }}</div>
                                 <div class="user profilephoto" style="width:30px;height:30px;background-color:whitesmoke;margin-left:10px; border-radius:50%; " id="small-profile">
                                     <!-- <img src="image/darwin-piodos.jpg" width="30px" class="darwin-piodos" style="border-radius:50%; margin-left:10px;"> -->

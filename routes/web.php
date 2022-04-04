@@ -103,4 +103,6 @@ Route::get('/adminsettings', function () {
 
 Route::get('/adminlist', 'UserListController@index'); 
 
- 
+
+Route::get('delete/{id}', 'UserListController@deletedata'); 
+
